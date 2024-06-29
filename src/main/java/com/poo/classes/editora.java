@@ -23,7 +23,25 @@ public class editora {
         return livro;
     }
     public void setlivro(){
-        
+
         this.livro = livro;
+    }
+    public String getedicao(){
+        return edicao;
+    }
+    public void setedicao(){
+        this.edicao = edicao;
+    }
+    public int getano(){
+        return ano;
+    }
+    public void setano(){
+        this.ano = ano;
+    }
+    public String getautor(){
+        return autor;
+    }
+    public void setautor(){
+        this.autor = autor;
     }
 }
