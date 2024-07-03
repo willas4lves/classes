@@ -5,8 +5,9 @@ public class exemplar {
     private int exemplarEmprestimo;
     private static int contador = 0;
     
-    public exemplar(int exemplarID) {
-        this.exemplarID = exemplarID;
+    public exemplar() {
+        this.exemplarID = contador;
+        contador++;
     }
     public int getExemplarID() {
         return exemplarID;

@@ -1,46 +1,89 @@
 package com.poo.classes;
 
+import com.poo.classes.bibliotecateste.Pessoa;
 
 public class Endereco_Pessoa {
-    private int enderecoId;
-    private String cidade;
+    private static int contadorEndereco = 0;
+    private Pessoa pessoa;
+    private int enderecoID;
     private String uf;
-    private String logradouro;
+    private String cidade;
+    private String tipo;
+    private int numeroResidencia;
     private String complemento;
-    private static int contador = 0;
-    
-    public int getEnderecoId() {
-        return enderecoId;
+    private int cep;
+
+    public Endereco_Pessoa(int cep) {
+        this.cep = cep;
+        enderecoID = contadorEndereco;
+        contadorEndereco++;
     }
-    public void setEnderecoId(int enderecoId) {
-        this.enderecoId = enderecoId;
+
+    public Pessoa getPessoa() {
+        return pessoa;
     }
-    public String getCidade() {
-        return cidade;
+
+    public int getEnderecoID() {
+        return enderecoID;
     }
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
-    }
+
     public String getUf() {
         return uf;
     }
-    public void setUf(String uf) {
-        this.uf = uf;
+
+    public String getCidade() {
+        return cidade;
     }
-    public String getLogradouro() {
-        return logradouro;
+
+    public String getTipo() {
+        return tipo;
     }
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
+
+    public int getNumeroResidencia() {
+        return numeroResidencia;
     }
+
     public String getComplemento() {
         return complemento;
     }
+
+    public int getCep() {
+        return cep;
+    }
+
+    public void setPessoa(Pessoa pessoa) {
+        this.pessoa = pessoa;
+    }
+
+    public void setEnderecoID(int enderecoID) {
+        this.enderecoID = enderecoID;
+    }
+
+    public void setUf(String uf) {
+        if (uf != null && uf.length() == 2) {
+            this.uf = uf.toUpperCase();
+        } else {
+            throw new IllegalArgumentException("UF deve ter exatamente 2 caraceteres.");
+        }
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setNumeroResidencia(int numeroResidencia) {
+        this.numeroResidencia = numeroResidencia;
+    }
+
     public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
 
-    
-    
-
+    public void setCep(int cep) {
+        this.cep = cep;
+    }
 }

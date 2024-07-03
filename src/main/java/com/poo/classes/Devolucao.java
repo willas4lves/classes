@@ -3,23 +3,27 @@ package com.poo.classes;
 import java.time.LocalDate;
 
 public class Devolucao {
+    private static int contadorDevolucao=0;
+    private int devolucaoID;
+    private LocalDate dataDevolucao;
 
-    int devolucaoId;
-    LocalDate dataDevolucao = LocalDate.now();
-    private static int contador = 0;
-    
-    public Devolucao(int devolucaoId) {
-        this.devolucaoId = devolucaoId;
+    public Devolucao() {
+        devolucaoID = contadorDevolucao;
+        contadorDevolucao++;
     }
-    public int getDevolucaoId() {
-        return devolucaoId;
+
+    public int getDevolucaoID() {
+        return devolucaoID;
     }
-    public void setDevolucaoId(int devolucaoId) {
-        this.devolucaoId = devolucaoId;
-    }
+
     public LocalDate getDataDevolucao() {
-        return dataDevolucao;
+        return this.dataDevolucao;
     }
+
+    public void setDevolucaoID(int devolucaoID) {
+        this.devolucaoID = devolucaoID;
+    }
+
     public void setDataDevolucao(LocalDate dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }

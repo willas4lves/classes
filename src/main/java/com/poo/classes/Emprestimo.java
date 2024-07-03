@@ -6,8 +6,9 @@ public class Emprestimo {
     String dataPrevDev;
     private static int contador = 0;
     
-    public Emprestimo(int emprestimoId) {
-        this.emprestimoId = emprestimoId;
+    public Emprestimo() {
+        this.emprestimoId = contador;
+        contador++;
     }
     public int getEmprestimoId() {
         return emprestimoId;

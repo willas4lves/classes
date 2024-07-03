@@ -1,42 +1,73 @@
 package com.poo.classes;
 
+import com.poo.classes.bibliotecateste.Editora;
+
 public class Livro {
-    private int livroId;
+
+    private static int contadorLivro = 0;
+    private int livroID;
     private String edicao;
     private String titulo;
-    private String ano;
-    private static int contador = 0;
+    private int ano;
+    private Editora editora;
+    private Autor autor;
 
-    public int getLivroId() {
-        return livroId;
+    public Livro(String edicao, String titulo, int ano, Editora editora, Autor autor) {
+        livroID = contadorLivro;
+        contadorLivro++;
+        this.edicao = edicao;
+        this.titulo = titulo;
+        this.ano = ano;
+        this.editora = editora;
+        this.autor = autor;
     }
 
-    public void setLivroId(int livroId) {
-        this.livroId = livroId;
+    public int getLivroID() {
+        return livroID;
     }
 
     public String getEdicao() {
         return edicao;
     }
 
-    public void setEdicao(String edicao) {
-        this.edicao = edicao;
-    }
-
     public String getTitulo() {
         return titulo;
+    }
+
+    public int getAno() {
+        return ano;
+    }
+
+    public Editora getEditora() {
+        return editora;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setLivroID(int livroID) {
+        this.livroID = livroID;
+    }
+
+    public void setEdicao(String edicao) {
+        this.edicao = edicao;
     }
 
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
 
-    public String getAno() {
-        return ano;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
 
-    public void setAno(String ano) {
-        this.ano = ano;
+    public void setEditora(Editora editora) {
+        this.editora = editora;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
     }
 
 }
