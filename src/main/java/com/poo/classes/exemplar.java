@@ -3,6 +3,7 @@ package com.poo.classes;
 public class exemplar {
     private int exemplarID;
     private int exemplarEmprestimo;
+    private static int contador = 0;
     
     public exemplar(int exemplarID) {
         this.exemplarID = exemplarID;

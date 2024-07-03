@@ -5,6 +5,7 @@ public class Livro {
     private String edicao;
     private String titulo;
     private String ano;
+    private static int contador = 0;
 
     public int getLivroId() {
         return livroId;

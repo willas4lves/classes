@@ -6,6 +6,7 @@ public class Devolucao {
 
     int devolucaoId;
     LocalDate dataDevolucao = LocalDate.now();
+    private static int contador = 0;
     
     public Devolucao(int devolucaoId) {
         this.devolucaoId = devolucaoId;

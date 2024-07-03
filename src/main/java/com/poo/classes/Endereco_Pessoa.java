@@ -7,6 +7,7 @@ public class Endereco_Pessoa {
     private String uf;
     private String logradouro;
     private String complemento;
+    private static int contador = 0;
     
     public int getEnderecoId() {
         return enderecoId;
