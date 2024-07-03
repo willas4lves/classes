@@ -1,8 +1,12 @@
 package com.poo.classes;
 
 public class Editora_atividade {
-    int editoraId;
-    String nome;
+    private int editoraId;
+    private String nome;
+    
+    public Editora_atividade(int editoraId) {
+        this.editoraId = editoraId;
+    }
     public int getEditoraId() {
         return editoraId;
     }

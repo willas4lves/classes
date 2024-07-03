@@ -1,8 +1,16 @@
 package com.poo.classes;
 
 public class Autor {
-    int autorId;
-    String nome;
+
+    private static int contadorId = 1;
+    private int autorId;
+    private String nome;
+
+    public Autor(String nome) {
+        this.autorId = contadorId++;
+        this.nome = nome;
+    }
+
 
     public int getAutorId() {
         return autorId;

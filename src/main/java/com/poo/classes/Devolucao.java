@@ -6,20 +6,22 @@ public class Devolucao {
 
     int devolucaoId;
     LocalDate dataDevolucao = LocalDate.now();
-
-    public int getdevolucaoId(){
+    
+    public Devolucao(int devolucaoId) {
+        this.devolucaoId = devolucaoId;
+    }
+    public int getDevolucaoId() {
         return devolucaoId;
     }
-
-    public LocalDate getdatadevolucao(){
+    public void setDevolucaoId(int devolucaoId) {
+        this.devolucaoId = devolucaoId;
+    }
+    public LocalDate getDataDevolucao() {
         return dataDevolucao;
     }
-
-    public void setdevolucaoId(){
+    public void setDataDevolucao(LocalDate dataDevolucao) {
+        this.dataDevolucao = dataDevolucao;
     }
-
-    public void setdatadevolucao(){
-        
-    }
+    
 
 }

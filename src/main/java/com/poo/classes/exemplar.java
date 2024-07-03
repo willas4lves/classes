@@ -1,9 +1,12 @@
 package com.poo.classes;
 
 public class exemplar {
-    int exemplarID;
-    int exemplarEmprestimo;
+    private int exemplarID;
+    private int exemplarEmprestimo;
     
+    public exemplar(int exemplarID) {
+        this.exemplarID = exemplarID;
+    }
     public int getExemplarID() {
         return exemplarID;
     }

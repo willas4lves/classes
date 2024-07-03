@@ -4,6 +4,10 @@ public class Emprestimo {
     int emprestimoId;
     String dataEmprestimo;
     String dataPrevDev;
+    
+    public Emprestimo(int emprestimoId) {
+        this.emprestimoId = emprestimoId;
+    }
     public int getEmprestimoId() {
         return emprestimoId;
     }
